@@ -1,4 +1,4 @@
-package main.java.com.fizzbuzz;
+package com.fizzbuzz;
 
 public class Main {
 
@@ -16,19 +16,19 @@ public class Main {
         }
     }
 
-    private static Boolean isFizz(int value) {
-        return isDivisableBy(value, 3) || containsDigit(value, "3");
+    protected static Boolean isFizz(int value) {
+        return isDividedBy(value, 3) || containsDigit(value, "3");
     }
 
-    private static Boolean isBuzz(int value) {
-        return isDivisableBy(value, 5) || containsDigit(value, "5");
+    protected static Boolean isBuzz(int value) {
+        return isDividedBy(value, 5) || containsDigit(value, "5");
     }
 
-    private static Boolean isDivisableBy(int value, int divisibleBy) {
+    protected static Boolean isDividedBy(int value, int divisibleBy) {
         return value % divisibleBy == 0;
     }
 
-    private static Boolean containsDigit(int value, String digit) {
+    protected static Boolean containsDigit(int value, String digit) {
         return String.valueOf(value).contains(digit);
     }
 }
