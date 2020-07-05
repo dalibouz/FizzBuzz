@@ -36,6 +36,6 @@ public class Main {
     }
 
     protected static Boolean containsDigit(int value, String digit) {
-        return String.valueOf(value).contains(digit);
+        return digit != null && !digit.isEmpty() && String.valueOf(value).contains(digit);
     }
 }

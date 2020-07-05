@@ -33,4 +33,13 @@ class MainTest {
         assertThrows(DividedByZeroException.class, () -> Main.isDividedBy(5, 0));
         assertDoesNotThrow(() -> Main.isDividedBy(5, 2));
     }
+
+    @Test
+    public void containsDigitTest() {
+        assertTrue(Main.containsDigit(31, "1"));
+        assertFalse(Main.containsDigit(31, "2"));
+        assertFalse(Main.containsDigit(53, "1"));
+        assertFalse(Main.containsDigit(7, null));
+        assertFalse(Main.containsDigit(99, ""));
+    }
 }
